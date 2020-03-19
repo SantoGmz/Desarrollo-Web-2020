@@ -5,11 +5,12 @@
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<title>Inicio</title>
 		<link href="css/estilo.css" rel="stylesheet">
+		<script src="js/app.js"></script>
 	</link>
 	</meta>
 	</meta>
 </head>
-<body>
+<body onload="reloj()">
 	<h3>SIMULACION CONSORCIO BANCAS</h3>
 	<div class="principal">
 		<div class="lf">
@@ -267,7 +268,7 @@
 						<td class="letrero" align="center">RELOJ</td>
 					</tr>
 					<tr>
-						<td class="fuente" align="center">01:01:00</td>
+						<td class="fuente" align="center" id="datosHora"></td>
 					</tr>
 				</table>
 				<table width="100%">
