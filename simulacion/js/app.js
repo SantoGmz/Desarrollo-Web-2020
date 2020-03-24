@@ -4,7 +4,10 @@ function reloj() {
     var minutos = fecha.getMinutes();
     var segundos = fecha.getSeconds();
     var actualizacion = setTimeout('reloj()', 500);
-    document.getElementById('datosHora').innerHTML= hora+ " : " + minutos+ " : " + segundos;
+    document.getElementById('hora').innerHTML= hora + " :";
+    document.getElementById('minutos').innerHTML=  minutos + " :";
+    document.getElementById('segundos').innerHTML=  segundos;
+
 }
 
 
