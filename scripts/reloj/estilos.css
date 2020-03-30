@@ -1,0 +1,21 @@
+.principal{
+    width: 450px;
+    height: 255px;
+    background-color: silver;
+    
+}
+
+.fecha{
+    width: inherit;
+    height: 100px;
+    background-color: purple;
+    
+}
+
+.hora{
+    width: inherit;
+    height: 150px;
+    background-color: green;
+    margin-top: 5px;
+    
+}

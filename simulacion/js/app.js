@@ -11,27 +11,40 @@ function reloj() {
 
 }
 
-//horas que jugara cada persona
-var tiempoJugado = document.getElementById('tiempoJugado');
-//lo multiplico por 60 por que seran horas x minutos
-var tiempoJugado = tiempoJugado*60;
-
-//numero de terminales/maquinas que seran abiertas para jugadas
-var numeroDeMaquinas = document.getElementById('numeroDeMaquinas');
-
-//Numero de loterías cuales jugará
-var loterias = document.getElementById('loterias');
-
-//jugadores que Habran
-var cantidaDeJugadores = document.getElementById('cantidaDeJugadores');
-
-//cantidad de quinielas
-var cantidadDeJugadas = document.getElementById('cantidadDeJugadas');
-
-//dinero que jugará cada quien
-var cantidadDeDinerojugado = document.getElementById('cantidadDeDinerojugado');
 
 
+//botones
+const btninicio = document.querySelector('#btninicio')
+
+btninicio.addEventListener('click', ()=>{
+    
+
+    //horas que jugara cada persona
+   // var tiempoJugado = document.getElementById('tiempoJugado');
+    var tiempoJugado = document.querySelector('#tiempoJugado');
+
+    //lo multiplico por 60 por que seran horas x minutos
+    //var tiempoJugado = tiempoJugado*60;
+        
+    //numero de terminales/maquinas que seran abiertas para jugadas
+    var numeroDeMaquinas = parseInt(document.getElementById('numeroDeMaquinas'));
+
+    //Numero de loterías cuales jugará
+    var loterias = document.getElementById('loterias');
+
+    //jugadores que Habran
+    var cantidaDeJugadores = document.getElementById('cantidaDeJugadores');
+
+    //cantidad de quinielas
+    var cantidadDeJugadas = document.getElementById('cantidadDeJugadas');
+
+    //dinero que jugará cada quien
+    var cantidadDeDinerojugado = document.getElementById('cantidadDeDinerojugado');
 
 
 
+return console.log(tiempoJugado.value);
+
+
+
+  });

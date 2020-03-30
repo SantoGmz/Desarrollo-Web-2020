@@ -5,7 +5,6 @@
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<title>Inicio</title>
 		<link href="css/estilo.css" rel="stylesheet">
-		<script src="js/app.js"></script>
 	</link>
 	</meta>
 	</meta>
@@ -236,7 +235,7 @@
 				<table border="0" width="100%">
 					<tr>
 						<td width="30%">Tiempo Simulacion:</td>
-						<td><input type="number" id="tiempoJugado" max="100" min="0" value="0"></td>
+						<td><input type="number" id="tiempoJugado" max="100" min="0" value=""></td>
 					</tr>
 					<tr>
 						<td width="30%">Terminales:</td>
@@ -259,7 +258,7 @@
 						<td><input type="number" id="cantidadDeDinerojugado" max="100" min="0" value="0"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><button class="btn">Iniciar</button><button class="btn b">Terminar</button></td>
+						<td colspan="2"><button class="btn" id="btninicio">Iniciar</button><button class="btn b">Terminar</button></td>
 					</tr>
 				</table>
 				<br>
@@ -418,5 +417,6 @@
 		</div>
 		
 	</div>
+	<script src="js/app.js"></script>
 </body>
 </html>
