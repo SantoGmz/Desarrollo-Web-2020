@@ -36,6 +36,26 @@ btninicio.addEventListener('click', ()=>{
     //dinero que jugará cada quien
     var cantidadDeDinerojugado = document.querySelector('#cantidadDeDinerojugado').value;    
 
-    return console.log(tiempoJugado + numeroDeMaquinas + loterias + cantidaDeJugadores + cantidadDeJugadas + cantidadDeDinerojugado);
+    //Agregar Terminales
+    agregar_terminales(numeroDeMaquinas);
+   
 
   });
+
+
+
+//Agregando en terminal
+function agregar_terminales(numeroDeMaquinas){
+
+    term=numeroDeMaquinas;
+    
+    for(let i=1; i<=term; i++){
+        document.querySelector("#tablaterminales").insertRow(-1).innerHTML = `<tr><td>${i}</td><td>TERMINAL ${i}</td></tr>`;
+        }
+    };
+
+
+
+
+
+  
