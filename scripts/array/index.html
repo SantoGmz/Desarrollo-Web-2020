@@ -6,28 +6,78 @@
     <title>array</title>
 </head>
 <body>
+
+    
     <script >
         
 
 
 
+//id loteria cierre/HORA:MN
+        loterias = [
+        [1,"LR", 12,55],                            //["Loteria Real"],       0
+        [2,"GM", 02,55],                            //["Ganamas"],            1 
+        [3,"LN", 02,55],                            //["LOTERIA NACIONAL"]    2
+        [4,"LT", ,55],                              //["Loteca"],             3
+        [5,"LE", 08,55],                            //["LEIDSA"],             4
+        [6,"LN", 09,00]                            //["loteria Nacional"]     5
 
-        loterias = 
+        ];
 
-
-
-       Loteria real, ganamas, newyork loketa, new y,ork loteria nacional
-
-
-        alert(loterias[1]);
+        
 
 
 
 
+        term=4;
+    
+    for(let i=1; i<=term; i++){
+        document.querySelector("#tablaterminales").insertRow(-1).innerHTML = `<tr><td>${i}</td><td>TERMINAL ${i}</td></tr>`;
+        
+    };
+
+        
+ 
+
+        for (var i = 0; i < loterias.length; i++) {
+            document.write(loterias[i][1]+ "<br>");
+            
+        }
+        
 
 
+
+
+
+ 
 
     </script>
-    
+
+
+       <table width="100%" id="tablaterminales" class="hecho" border="1%">
+                	<thead>
+                		<tr class="letrero2">
+                			<th width="5%">NO</th>
+                			<th width="20%">TERMINAL</th>                			
+                		</tr>
+                	</thead>
+
+                </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <script src="jquery.js"></script>
 </body>
 </html>
