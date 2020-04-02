@@ -53,6 +53,11 @@ function agregar_terminales(numeroDeMaquinas){
         document.querySelector("#tablaterminales").insertRow(-1).innerHTML = `<tr><td>${i}</td><td>TERMINAL ${i}</td></tr>`;
         }
     };
+    //Agregar sorteos
+    function agregar_sorteos(){
+        
+
+    };
 
 
 
