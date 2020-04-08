@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crono</title>
 
-    <h1>CRONÓMETRO con Javascript</h1>
-<hr>
-<div id="cronometro">
-  <div id="reloj"> : 00 : 00 : 00</div> <!--cornómetro-->
-  <form name="cron" action="#"> <!--botones-->
-    <input type="button" value="Empezar" name="empieza" />
-    <input type="button" value="Parar" name="para" /><br/>
-    <input type="button" value="Continuar" name="continua" />
-    <input type="button" value="Reiniciar" name="reinicia" />
-  </form>
+  <script type="text/javascript">
+
+    function carga()
+    {
+      contador_s =0;
+      contador_m =0;
+      s = document.getElementById("segundos");
+      m = document.getElementById("minutos");
+      window.setInterval(
+          function(){
+            if(contador_s==60){
+              contador_s=0;
+              contador_m++;
+            m.innerHTML =contador_m;
+
+              if(contador_m==60){
+                contador_m=0;
+              }
+            }
+            s.innerHTML =contador_s;
+            contador_s++;
+          }
+        ,1);
+        descarga();
+    }
+
+   /*
+// crono reverso
+function carga()
+{
+  contador_s =60;
+  contador_m =60;
+  s = document.getElementById("segundos2");
+  m = document.getElementById("minutos2");
+
+  window.setInterval(
+      function(){
+        if(contador_s==0){
+          contador_s=60;
+          contador_m--;
+
+        m.innerHTML =contador_m;
+
+          if(contador_m==00){
+            contador_m=60;
+            contador_s=60;
+          }
+        }
+        s.innerHTML =contador_s;
+        contador_s = contador_s-1;
+        
+      }
+    ,10);
+}
+
+*/
+
+  </script>
+
+
+</head>
+<body onload="carga()">
+  <p>
+    <span id="minutos">0</span>
+    <span id="segundos">0</span>
+  </p>
+  <p>
+    <span id="minutos2">0</span>
+    <span id="segundos2">0</span>
+  </p>
+    
   
-    <script src="js/script.js"></script>
 </body>
 </html>

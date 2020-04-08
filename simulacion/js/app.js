@@ -41,6 +41,7 @@ $(function(){
         //Agregar Terminales
         agregar_terminales(numeroDeMaquinas);
         addLoteria();
+        crono();
     });
   
 });
@@ -61,25 +62,24 @@ function agregar_terminales(numeroDeMaquinas){
 
 //agregando loterias
 function addLoteria(){
-    loterias = [
-        [1,"LR", "12:55"],                            //["Loteria Real"],       0
-        [2,"GM", "02:55"],                            //["Ganamas"],            1 
-        [3,"LN", "02:55"],                            //["LOTERIA NACIONAL"]    2
-        [4,"LT", "5:55"],                              //["Loteca"],             3
-        [5,"LE", "08:55"],                            //["LEIDSA"],             4
-        [6,"LN", "09:00"]                            //["loteria Nacional"]     5
+   var loterias = [
+        [0,"LR", "12:55"],                            //["Loteria Real"],       0
+        [1,"GM", "02:55"],                            //["Ganamas"],            1 
+        [2,"LN", "02:55"],                            //["LOTERIA NACIONAL"]    2
+        [3,"LT", "5:55"],                              //["Loteca"],             3
+        [4,"LE", "08:55"],                            //["LEIDSA"],             4
+        [5,"LN", "09:00"]                            //["loteria Nacional"]     5
 
         ];
 
-        
-
-    for(let i =0; i<=7; i++){
+        //inserta en en html los datos de la loteria
+    for(let i =0; i<loterias.length; i++){
         var table=document.getElementById("cuerpoTabla");
         var row=table.insertRow(0);
         var cell1=row.insertCell(0);
         var cell2=row.insertCell(1);
-        var cell3=row.insertCell(2);
-        
+        var cell3=row.insertCell(2);    
+        console.log(loterias[i]);  
         cell1.innerHTML=loterias[i][0];
         cell2.innerHTML=loterias[i][1];
         cell3.innerHTML=loterias[i][2];
@@ -87,15 +87,50 @@ function addLoteria(){
 
         
     }
-
-
-
-
-/*
-    for(let i=1; i<=3; i++){
-        document.querySelector("#tabloterias").insertRow(0).innerHTML = `<tr><td>${i}</td><td>NombreLot ${i}</td></tr>`;
-    }*/
 };
 
 
+
+//Cronometro
+
+
+function ciclo(){
+    var nombre = "Santos";
+    console.log(nombre.length);
+    for(let i = 0; i<=nombre.length; i++){
+        console.log(nombre[i]);
+    }
+
+};
+
+/// Cronometro ///
+function crono(){
   
+  contador_s =60;
+  contador_m =60;
+  s = document.getElementById("cronoSegundos");
+  m = document.getElementById("cronoMinutos");
+
+  window.setInterval(
+      function(){
+        if(contador_s==0){
+          contador_s=60;
+          contador_m--;
+
+        m.innerHTML =contador_m;
+
+          if(contador_m==00){
+            contador_m=60;
+            contador_s=60;
+          }
+        }
+        s.innerHTML =contador_s;
+        contador_s = contador_s-1;
+        
+      }
+    ,1000);
+}
+
+
+
+

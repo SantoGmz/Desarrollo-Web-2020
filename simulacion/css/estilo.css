@@ -44,7 +44,7 @@ h3{
      border-bottom: 1px solid black;
      margin-top: -1px;
      text-align: center;
-     background-color: rgba(255,170,0,1);
+     background-color: rgba(87, 58, 0, 0.514);
 	 color: white;
 } 
 
@@ -82,7 +82,7 @@ h3{
 	margin-left: 100px!important;
 }
 .letrero{
-	background-color:rgba(255,170,0,1);
+	background-color:rgba(87, 58, 0, 0.514);
 	color: white; 
 	font-size: 1.5em;
 }
@@ -92,15 +92,18 @@ h3{
 }
 
 .letrero1{
-	background-color:rgba(255,170,0,1)!important;
+	background-color:rgba(87, 58, 0, 0.514)!important;
 	color: white!important; 
 	font-size: 1.1em!important;
 }
 
 .letrero2{
-	background-color:rgba(255,170,0,1)!important;
+	background-color:rgba(87, 58, 0, 0.514)!important;
 	color: white!important; 
 	font-size: 0.9em!important;
 }
 
 
+input::selection{
+	color: black;
+}
