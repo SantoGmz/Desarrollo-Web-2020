@@ -1,3 +1,4 @@
+/*
 function reloj() {
     var fecha = new Date();
     var hora = fecha.getHours();
@@ -7,13 +8,15 @@ function reloj() {
     document.getElementById('hora').innerHTML= hora + " :";
     document.getElementById('minutos').innerHTML=  minutos + " :";
     document.getElementById('segundos').innerHTML=  segundos ;
+    
 }
 
-
+*/
 
 
 //btn iniciar, recojera todas las variables
 $(function(){
+
     $('#btninicio').on("click",function() {
       
             //horas que jugara cada persona
@@ -26,24 +29,41 @@ $(function(){
         //numero de terminales/maquinas que seran abiertas para jugadas
         var numeroDeMaquinas = document.querySelector('#numeroDeMaquinas').value;
 
-        //Numero de loterías cuales jugará
-        var loterias = document.querySelector('#loterias').value;    
+          /* Variables generadas, estas (LIMPIAR)
+          //Numero de loterías cuales jugará
+          var loterias = document.querySelector('#loterias').value;    
 
-        //jugadores que Habran
-        var cantidaDeJugadores = document.querySelector('#cantidaDeJugadores').value;    
+          //jugadores que Habran
+          var cantidaDeJugadores = document.querySelector('#cantidaDeJugadores').value;    
 
-        //cantidad de quinielas
-        var cantidadDeJugadas = document.querySelector('#cantidadDeJugadas').value;    
+          //cantidad de quinielas
+          var cantidadDeJugadas = document.querySelector('#cantidadDeJugadas').value;    
 
-        //dinero que jugará cada quien
-        var cantidadDeDinerojugado = document.querySelector('#cantidadDeDinerojugado').value;    
-
+          //dinero que jugará cada quien
+          var cantidadDeDinerojugado = document.querySelector('#cantidadDeDinerojugado').value;    
+          */
         //Agregar Terminales
         agregar_terminales(numeroDeMaquinas);
+        //agregaloterias
         addLoteria();
-        crono();
+        //temporizador cuenta regresiva del tiempo
+        crono(tiempoJugado);
+        //reloj
+        reloj();
+        //Inserta en el campo de las jugadas
+        insertJugadas();
+
     });
-  
+
+
+    //intento de detencion del reloj
+    $('#btn-terminar').on("click", function(){
+      clearInterval(reloj());
+      console.log("pasaste por aqui");
+      
+    });
+
+
 });
   
 
@@ -74,12 +94,14 @@ function addLoteria(){
 
         //inserta en en html los datos de la loteria
     for(let i =0; i<loterias.length; i++){
+      //genero el id de la tabla y lo vuelvo una variable
         var table=document.getElementById("cuerpoTabla");
+        //row = fila metodo ".insetrow" agrega una fila
         var row=table.insertRow(0);
+        //cell = celda, ".insertCell()" = insertar celda
         var cell1=row.insertCell(0);
         var cell2=row.insertCell(1);
-        var cell3=row.insertCell(2);    
-        console.log(loterias[i]);  
+        var cell3=row.insertCell(2);     
         cell1.innerHTML=loterias[i][0];
         cell2.innerHTML=loterias[i][1];
         cell3.innerHTML=loterias[i][2];
@@ -90,29 +112,20 @@ function addLoteria(){
 };
 
 
-
-//Cronometro
-
-
-function ciclo(){
-    var nombre = "Santos";
-    console.log(nombre.length);
-    for(let i = 0; i<=nombre.length; i++){
-        console.log(nombre[i]);
-    }
-
-};
-
 /// Cronometro ///
-function crono(){
+function crono(tiempoJugado){
   
+
+
   contador_s =60;
-  contador_m =60;
+  contador_m = tiempoJugado ;
   s = document.getElementById("cronoSegundos");
   m = document.getElementById("cronoMinutos");
-
+  //agrego para que desde el comienzo me añada los minutos al html desde el comienzo
+  document.getElementById('cronoMinutos').innerHTML= contador_m;
+  
   window.setInterval(
-      function(){
+    function(){
         if(contador_s==0){
           contador_s=60;
           contador_m--;
@@ -129,8 +142,51 @@ function crono(){
         
       }
     ,1000);
+};
+
+// crono reloj 2
+function reloj()
+{
+
+  reloj_s =0;
+  reloj_m =9;
+  rs = document.getElementById("relojSeg");
+  rm = document.getElementById("relojMin");
+  window.setInterval(
+      function(){
+        if(reloj_s==60){
+          reloj_s=0;
+          reloj_m++;
+        rm.innerHTML =reloj_m;
+
+          if(reloj_m==21){
+            reloj_m=8;
+          }
+        }
+          rs.innerHTML = reloj_s;
+          reloj_s++;
+      }
+    ,10);
+};
+
+
+
+//devuelve un numero aleatoroi con aleatorio(num)
+function aleatorio(x) {
+  return Math.floor(Math.random() * x);
 }
 
 
 
 
+//cuerpoInfoJugadas
+
+    
+
+function insertJugadas(){
+
+  for(let i=1; i<=5; i++){
+    document.querySelector("#cuerpoInfoJugadas").insertRow(0).innerHTML = `<tr><td>${i}</td><td>2</td></tr><tr><td>3</td><td>4</td></tr><tr><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td></tr>`;
+  }
+
+};

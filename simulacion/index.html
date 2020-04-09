@@ -9,7 +9,7 @@
 	</meta>
 	</meta>
 </head>
-<body onload="reloj()">
+<body >
 	<h3>SIMULACION CONSORCIO BANCAS</h3>
 	<div class="principal statico">
 		<div class="lf">
@@ -176,7 +176,7 @@
 				<table border="0" width="100%">
 					<tr>
 						<td width="30%">Tiempo Simulacion:</td>
-						<td><input type="number" id="tiempoJugado" max="100" min="0" value="0"></td>
+						<td><input type="number" id="tiempoJugado" max="12" min="1" value="0" placeholder="Minutos a jugar"></td>
 					</tr>
 					<tr>
 						<td width="30%">Terminales:</td>
@@ -199,25 +199,25 @@
 						<td><input type="number" id="cantidadDeDinerojugado" max="100" min="0" value="0"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><button class="btn" id="btninicio">Iniciar</button><button class="btn b">Terminar</button></td>
+						<td colspan="2"><button class="btn" id="btninicio">Iniciar</button><button class="btn b" id="btn-terminar">Terminar</button></td>
 					</tr>
 				</table>
 				<br>
 				<table width="100%">
 					<tr align="center">
 						<td class="letrero">RELOJ</td>
-						<td class="letrero">Cronometro</td>
+						<td class="letrero">Tiempo restante</td>
 
 					</tr>
 					<tr align="center">
 						<td class="fuente"  id="datosHora">
 							<span id="hora"></span>
-							<span id="minutos"></span>
-							<span id="segundos"></span>
+							<span id="relojMin">9</span>
+							<span id="relojSeg">0</span>
 						</td>
 						<td class="fuente" id="datosCrono">
-							<span id="cronoMinutos">60</span>
-							<span id="cronoSegundos">60</span>
+							<span id="cronoMinutos"></span>
+							<span id="cronoSegundos"></span>
 						</td>
 					</tr>
 				</table>
@@ -234,57 +234,8 @@
 							<th width="5%">HORA</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr align="center">
-							<td>1</td>
-							<td>5</td>
-							<td>2</td>
-							<td>6</td>
-							<td>3</td>
-							<td>1</td>
-							<td>1</td>
-							<td>01:01</td>
-						</tr>
-						<tr align="center">
-							<td>2</td>
-							<td>6</td>
-							<td>3</td>
-							<td>1</td>
-							<td>2</td>
-							<td>2</td>
-							<td>2</td>
-							<td>01:25</td>
-						</tr>
-						<tr align="center">
-							<td>3</td>
-							<td>3</td>
-							<td>6</td>
-							<td>3</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>01:30</td>
-						</tr>
-						<tr align="center">
-							<td>4</td>
-							<td>2</td>
-							<td>4</td>
-							<td>5</td>
-							<td>0</td>
-							<td>1</td>
-							<td>1</td>
-							<td>01:40</td>
-						</tr>
-						<tr align="center">
-							<td>5</td>
-							<td>6</td>
-							<td>5</td>
-							<td>2</td>
-							<td>3</td>
-							<td>2</td>
-							<td>1</td>
-							<td>01:45</td>
-						</tr>
+					<tbody id="cuerpoInfoJugadas">
+
 					</tbody>
 					
 				</table>
