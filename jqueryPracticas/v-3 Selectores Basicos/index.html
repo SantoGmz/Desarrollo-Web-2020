@@ -5,19 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilos.css">
-
     <script src="jquery/jquery.js"></script>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 <body>
+  <nav class="navbar navbar-light bg-dark">
+    <a class="navbar-brand" href="#" > <span id="titulo"> Navbar</span></a>
+  </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!--col-md-12  --> 
+        
+      <!-- <h1 class="titulo">Esto es un título</h1>
+      <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil necessitatibus accusamus deleniti accusantium molestias, eaque in corrupti, culpa quia ratione odit placeat est alias mollitia quisquam nobis quis veritatis!</p> -->
+    </div><!--/col-md-12  -->   
 
+    <div class="col-sm-5 btn">        
+        <input type="text" id="input-animal" required placeholder="Animal" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <input type="text" id="input-color" required placeholder="Color" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <input type="text" id="input-dueno" required placeholder="Dueño" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <button type="button"  id="add" class="btn btn-outline-danger btn-lg btn-block">Agregar</button>
+    </div> 
 
-<h1 class="titulo">Esto es un título</h1>
-<p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil necessitatibus accusamus deleniti accusantium molestias, eaque in corrupti, culpa quia ratione odit placeat est alias mollitia quisquam nobis quis veritatis!</p>
-<div>:)</div>
+    <div class="col-sm-5">
 
-    
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Animal</th>
+                <th scope="col">Color</th>
+                <th scope="col">Dueño</th>
+              </tr>
+            </thead>
+            <tbody id="tabla">             
+                
+                <!--
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>-->
+            </tbody>
+        </table>   
+    </div><!-- col-sm-6 -->      
+  </div><!-- /row -->    
+</div><!-- /fluir -->    
 </body>
 </html>

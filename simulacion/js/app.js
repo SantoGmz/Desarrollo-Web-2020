@@ -51,7 +51,7 @@ $(function(){
         //reloj
         reloj();
         //Inserta en el campo de las jugadas
-        insertJugadas();
+        insertJugadas(loterias, cantidaDeJugadores, cantidadDeJugadas, cantidadDeDinerojugado);
 
     });
 
@@ -183,9 +183,9 @@ function aleatorio(x) {
 
     
 
-function insertJugadas(){
+function insertJugadas(loterias, cantidaDeJugadores, cantidadDeJugadas, cantidadDeDinerojugado){
 
-  for(let i=1; i<=5; i++){
+  for(let i=0; i<cantidadDeJugadas.value; i++){
     document.querySelector("#cuerpoInfoJugadas").insertRow(0).innerHTML = `<tr><td>${i}</td><td>2</td></tr><tr><td>3</td><td>4</td></tr><tr><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td></tr>`;
   }
 
