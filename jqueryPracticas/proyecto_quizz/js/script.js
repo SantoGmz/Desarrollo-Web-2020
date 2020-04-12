@@ -3,6 +3,10 @@ $(function () {
     $('#tablaDetalles').hide();
     $('#clear').hide();
 
+
+
+
+
     //Generar numero aleatorio de 4 digitos
     function aleatorio(min, max) {
         return Math.round(Math.random() * (max - min) + min);
@@ -59,7 +63,10 @@ $(function () {
         //Respuesta 1
         //Sacando y dividiendo las variables pedazos por pedasos
         var input1r1 = parseInt(input1[0]);
-        var input1r2 = parseInt(input1[1]);
+        var input1r2 = parseInt(input1[1]);     
+            // var input1test1 = input1.substr(0,2);
+            // console.log(input1test1);
+            // INTENTO DE REDUCIR CODIGO
         var input1r3 = parseInt(input1[2]);
         var input1r4 = parseInt(input1[3]);
         //aqui divido en pares y sumo las variables
@@ -113,6 +120,9 @@ $(function () {
             //array de respuestas
             var respuestas = new Array(input1resultado, input2resultado, input3resultado, input4resultado);
 
+            //Agregando la variable en un campo oculto, Este campo guarda para yo poder generarlo mas tarde
+            document.getElementById('Otnas').value = input4resultado;
+
             //aqui creo la variable en 0 sin nada osea limpia
             var txt = '';
             //esto añade todo a la variable con += que suma lo nuevo que se le introduco con lo que tiene
@@ -129,9 +139,14 @@ $(function () {
             txt += '<tr>';
             txt += '<th scope="row">' + 3 + '</th>';
             txt += '<td>' + operaciones[3] + '</td>';
-            txt += '<td id="oculto">                <input type="text" class="form-control" placeholder="Recipients username" aria-label="Recipients username" aria-describedby="basic-addon2"></td>';
+            txt += '<td><input type="text" id="iptAdivinar" placeholder="Num" class="form-control"></td>';
             // txt += '<td id="oculto">' + respuestas[3] + '</td>';
             txt += ' </tr>';
+
+            // txt += ' <tr>';
+            // txt += '<td colspan="3"><button type="button" id="btnAdivinar" class="btn btn-secondary btn-lg btn-block">Adivinar</button></td>';
+
+            // txt += ' </tr>';
 
             // txt += ' <tr>';
             // txt += '<td rowspan="3"><button type="button" class="btn btn-secondary btn-sm">Small button</button></td>';
@@ -140,7 +155,9 @@ $(function () {
 
             //Generacion del id al cual se le agregará la variable
             document.getElementById('cuerpoTabla').innerHTML = txt;
-            //Cierre de la condicion, Esto para encerrar el codigo que quiero que se ejecute   
+
+
+            //errores de input   
         } if(input1.length != 4){
             // else que es de lo contrario, osea el codigo que no se ejecutará si la condicion no es la que se pide
             $('#tablaDetalles').hide();
@@ -157,7 +174,39 @@ $(function () {
             // else que es de lo contrario, osea el codigo que no se ejecutará si la condicion no es la que se pide
             $('#tablaDetalles').hide();
             $('#cp4').css({'border':'1px solid red'});
-        }
-    
+        }     
+        
+        
+
+        
+          
+           
     });
+
+            
+            //btn-adivinar
+    $('#btnAdivinar').on("click", function() {
+        var resultado = document.getElementById('Otnas').value;
+        resultado = parseInt(resultado);
+        //el input 
+        
+        var inputadivinar = document.getElementById('iptAdivinar').value;
+        var respuesta= parseInt(inputadivinar);
+        // console.log(respuesta);
+        if(respuesta== resultado){
+            console.log("correcto");
+        }else{
+            console.log("incorrecto");
+        }
+
+
+
+
+        
+        // var conteo = respuesta.length;
+
+    });
+
+
+
 });
