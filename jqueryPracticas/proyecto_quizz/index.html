@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-
-    <div class="container">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Quizz</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-light bg-dark">
+            <img src="img/blanco.png"  alt="logo" width="120px">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          </nav>
+        <div class="container">
         
         <div class="row">
             <!-- espacio en blanco -->
@@ -19,10 +23,10 @@
             </div>
             <!-- los input -->
             <div class="col-md-4">
-                <input type="text" class="form-control" id="cp1" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <input type="text" class="form-control" id="cp2" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <input type="text" class="form-control" id="cp3" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <input type="text" class="form-control" id="cp4" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control mr-auto" id="cp1" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control mr-auto" id="cp2" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control mr-auto" id="cp3" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control mr-auto" id="cp4" placeholder="INGRESA VALORES DE 4 DIGITOS">
                 <!-- Botones -->
                 <button type="button" id="clear" class="btn btn-danger btn-block">Limpiar</button>
                 <button type="button" id="generarNumeros" class="btn btn-warning btn-block">Generar Num</button>
@@ -59,10 +63,8 @@
 
             
         </div>
+        
     </div>
-
-
-
 
     <script src="jquery/jquery.js"></script>
     <script src="js/script.js"></script>

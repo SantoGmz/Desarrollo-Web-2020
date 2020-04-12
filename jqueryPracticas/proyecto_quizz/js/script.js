@@ -174,13 +174,7 @@ $(function () {
             // else que es de lo contrario, osea el codigo que no se ejecutará si la condicion no es la que se pide
             $('#tablaDetalles').hide();
             $('#cp4').css({'border':'1px solid red'});
-        }     
-        
-        
-
-        
-          
-           
+        }      
     });
 
             
@@ -213,7 +207,7 @@ $(function () {
         // var conteo = respuesta.length;
 
     });
-
+///Audio agregado, esta funcion se dará cuenta si es correcto o incorrecto.
     function audio(x){
         if(x==1){
             audi= new Audio('audio/correcto.mp3')
