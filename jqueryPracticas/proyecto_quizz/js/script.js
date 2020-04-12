@@ -177,6 +177,7 @@ $(function () {
         }      
     });
 
+
             
             //btn-adivinar
     $('#btnAdivinar').on("click", function() {
@@ -212,6 +213,7 @@ $(function () {
         if(x==1){
             audi= new Audio('audio/correcto.mp3')
             audi.play();
+            generarContra(100,999);
         }else{
             audi= new Audio('audio/incorrecto.mp3')
             audi.play();
@@ -219,5 +221,10 @@ $(function () {
 
     }
 
+       //Generar numero aleatorio de 4 digitos
+       function generarContra(min, max) {
+           $('#btnAdivinar').value="hola";
+        return console.log(Math.round(Math.random() * (max - min) + min));
 
+    };
 });

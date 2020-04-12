@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es">     
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Quizz</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="css/estilos.css">
+        <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     </head>
     <body>
         
-        <nav class="navbar navbar-light bg-dark">
+        <nav class="navbar navbar-light bg-primary">
             <img src="img/blanco.png"  alt="logo" width="120px">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
           </nav>
-        <div class="container">
+        <div class="container-fluid bg-light">
         
         <div class="row">
             <!-- espacio en blanco -->
-            <div class="col-md-4">
+            <div class="col-md-4 spacio">
 
             </div>
             <!-- los input -->
             <div class="col-md-4">
-                <input type="number" class="form-control mr-auto" id="cp1" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <input type="number" class="form-control mr-auto" id="cp2" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <input type="number" class="form-control mr-auto" id="cp3" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <input type="number" class="form-control mr-auto" id="cp4" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control spacio" id="cp1" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control spacio" id="cp2" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control spacio" id="cp3" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <input type="number" class="form-control spacio" id="cp4" placeholder="INGRESA VALORES DE 4 DIGITOS">
                 <!-- Botones -->
                 <button type="button" id="clear" class="btn btn-danger btn-block">Limpiar</button>
                 <button type="button" id="generarNumeros" class="btn btn-warning btn-block">Generar Num</button>
@@ -43,7 +44,7 @@
             <div class="col-md-4"></div>
 
             <div class="col-md-4">
-                <table id="tablaDetalles" class="table table-dark">
+                <table id="tablaDetalles" class="table spacio table-dark">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -63,10 +64,41 @@
 
             
         </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-5">                
+                <table>
+                <tr>
+                    <td><input type="number" class="form-control" placeholder="Contraseña de desbloqueo"></td>
+                <input type="number" class="form-control mr-auto" id="cp1" placeholder="INGRESA VALORES DE 4 DIGITOS">
+                <td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            <div class="col-md-3"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
         
     </div>
 
-    <script src="jquery/jquery.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
