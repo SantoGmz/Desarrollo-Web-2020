@@ -195,8 +195,15 @@ $(function () {
         // console.log(respuesta);
         if(respuesta== resultado){
             console.log("correcto");
+            audio(1)
+            $('#iptAdivinar').css({'border':'1px solid green'});
+
+
         }else{
             console.log("incorrecto");
+            audio(2)
+            $('#iptAdivinar').css({'border':'1px solid red'});
+
         }
 
 
@@ -207,6 +214,16 @@ $(function () {
 
     });
 
+    function audio(x){
+        if(x==1){
+            audi= new Audio('audio/correcto.mp3')
+            audi.play();
+        }else{
+            audi= new Audio('audio/incorrecto.mp3')
+            audi.play();
+        }
+
+    }
 
 
 });
