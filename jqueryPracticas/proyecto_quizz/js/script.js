@@ -232,6 +232,8 @@ $(function () {
         $('.ejerc1').hide('fast');
         $('.ejerc2').slideToggle('slow');
         ejec2Aleatorio(1, 100);
+
+        $(this).addClass('oculto');
     });
 
 
