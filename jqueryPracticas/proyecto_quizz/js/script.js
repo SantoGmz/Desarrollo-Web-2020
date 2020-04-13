@@ -218,45 +218,62 @@ $(function () {
         }
 
     }
+    
+    // Creando un array para que me cree los numeros aleatorios y yo poder sumarlos luego
+
+
+ 
 
 
 
+
+
+    // Boton/evento de la parte derecha de arriba de "siguiente"
     $('#btnSiguiente1').on("click", function(){
         $('.ejerc1').hide('fast');
         $('.ejerc1').addClass('oculto');
         alert('Pensa Rapido!');
         $('#eje2ResultadoFinal').show('fast');
-        // $('#ejerc2').slideToggle('slow');
+        // $('#ejerc2').slideToggle('slow');        
+
 
         // $(this).addClass('oculto');
         var txt2="";
 
+        //esto es la cabecera
         txt2+='<tr>';
             txt2+='<td>Tienes</td>';
-            txt2+='<th scope="row">'+aleatorio(10, 100)+'</th>';
+            txt2+='<th scope="row">0</th>';
             txt2+='</tr>';
-        for(let i=0; i<2; i++){
-          
-          txt2+='<tr>';
-          txt2+='<td>Súmale</td>';
-          txt2+='<th scope="row">'+aleatorio(10, 50)+'</th>';
-          txt2+='</tr>';
+
+            // lo hice con esta estructura porque queria agregar diferente tipo de texto
+            //Array de las fraces sumale y agregale
+            var frace = new Array();
+            //array  de los numeros aleatorios
+            var numerosEje2 = new Array();
+
+        for(let ir=0; ir<=5; ir++){
+            numerosEje2.push(aleatorio(1,100));
+            frace.push("Súmale","Más");
 
           txt2+='<tr>';
-          txt2+='<td>Más</td>';
-          txt2+='<th scope="row">'+aleatorio(1, 10)+'</th>';
+          txt2+='<td>'+frace[ir]+'</td>';
+          txt2+='<th scope="row">'+numerosEje2[ir]+'</th>';
           txt2+='</tr>';
+
         }
-
+        // esto imprimira los numeros aleatorios
         document.getElementById('tablaCuerpoEj2').innerHTML=txt2;
 
 
     });
 
 
-    function ejec2Aleatorio(min, max){
-    return console.log(Math.round(Math.random() * (max - min) + min));
-    };
 
-    // ===el boton tiene que estar oculto siempre, creo que tendre que usar hasClass, es un verificador de clase, addClass y removeClass, es la mejor idea hasta ahora
+    // boton de enviar resultados de test
+    $('.btnEje2EnviarResult').on('click', function(){
+        // document.getElementsByClassName
+
+    });
+
 });
