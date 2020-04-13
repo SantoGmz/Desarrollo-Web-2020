@@ -227,4 +227,9 @@ $(function () {
         return console.log(Math.round(Math.random() * (max - min) + min));
 
     };
+
+    $('#btnSiguiente1').on("click", function(){
+        $('.ejerc1').hide('fast');
+        $('.ejerc2').slideToggle('slow');
+    });
 });

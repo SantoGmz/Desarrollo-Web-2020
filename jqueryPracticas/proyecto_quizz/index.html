@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Quizz</title>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css" >
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     </head>
@@ -14,10 +14,12 @@
         <nav class="navbar navbar-light bg-primary">
             <img src="img/blanco.png"  alt="logo" width="120px">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button type="button" id="btnSiguiente1" class="btn btn-light">Siguiente</button>
+
           </nav>
-        <div class="container-fluid bg-light">
+        <div class="container-fluid bg-light"></div>
         
-        <div class="row">
+        <div class="row ejerc1">
             <!-- espacio en blanco -->
             <div class="col-md-4 spacio">
 
@@ -39,7 +41,7 @@
         </div>
        
         <!-- info -->
-        <div class="row" >
+        <div class="row ejerc1" >
 
             <div class="col-md-4"></div>
 
@@ -64,20 +66,80 @@
 
             
         </div>
+        <!-- info -->
 
-        <div class="row">
+        <div class="row text-center oculto ejerc2">
             <div class="col-md-4"></div>
-            <div class="col-md-5">                
-                <table>
-                <tr>
-                    <td><input type="number" class="form-control" placeholder="Contraseña de desbloqueo"></td>
-                <input type="number" class="form-control mr-auto" id="cp1" placeholder="INGRESA VALORES DE 4 DIGITOS">
-                <td>
-                    </td>
-                </tr>
-            </table>
+
+            <div class="col-md-4">
+                <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>                      
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>                      
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>                      
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>                      
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>                      
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+
+            </div>
+
+            <div class="col-md-4"></div>
+
         </div>
-            <div class="col-md-3"></div>
 
 
 
@@ -90,13 +152,8 @@
 
 
 
-
-
-
-            
-        </div>
-        
     </div>
+    <!-- ///container/// -->
 
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
