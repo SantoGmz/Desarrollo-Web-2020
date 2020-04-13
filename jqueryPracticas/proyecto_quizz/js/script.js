@@ -211,7 +211,7 @@ $(function () {
         if(x==1){
             audi= new Audio('audio/correcto.mp3')
             audi.play();
-            generarContra(100,999);
+            
         }else{
             audi= new Audio('audio/incorrecto.mp3')
             audi.play();
@@ -221,53 +221,48 @@ $(function () {
     
     // Creando un array para que me cree los numeros aleatorios y yo poder sumarlos luego
 
-
- 
-
-
-
-
-
     // Boton/evento de la parte derecha de arriba de "siguiente"
-    $('#btnSiguiente1').on("click", function(){
-        $('.ejerc1').hide('fast');
-        $('.ejerc1').addClass('oculto');
-        alert('Pensa Rapido!');
-        $('#eje2ResultadoFinal').show('fast');
-        // $('#ejerc2').slideToggle('slow');        
+    $('#btnSiguiente1').on("click", function jsjs(){
+        console.log("pulsado")
+            $('.ejerc1').hide('fast');
+            $('.ejerc1').addClass('oculto');
+            alert('Pensa Rapido!');
+            $('#eje2ResultadoFinal').show('fast');
+            // $('#ejerc2').slideToggle('slow');        
 
 
-        // $(this).addClass('oculto');
-        var txt2="";
+            // $(this).addClass('oculto');
+            var txt2="";
 
-        //esto es la cabecera
-        txt2+='<tr>';
-            txt2+='<td>Tienes</td>';
-            txt2+='<th scope="row">0</th>';
+            //esto es la cabecera
+            txt2+='<tr>';
+                txt2+='<td>Tienes</td>';
+                txt2+='<th scope="row">0</th>';
+                txt2+='</tr>';
+
+                // lo hice con esta estructura porque queria agregar diferente tipo de texto
+                //Array de las fraces sumale y agregale
+                var frace = new Array();
+                //array  de los numeros aleatorios
+                var numerosEje2 = new Array();
+            //Cantidades de la suma de los unput=================================
+            for(let ir=0; ir<5; ir++){
+                numerosEje2.push(aleatorio(1,100));
+                frace.push("Súmale","Más");
+
+            txt2+='<tr>';
+            txt2+='<td>'+frace[ir]+'</td>';
+            txt2+='<th scope="row">'+numerosEje2[ir]+'</th>';
             txt2+='</tr>';
 
-            // lo hice con esta estructura porque queria agregar diferente tipo de texto
-            //Array de las fraces sumale y agregale
-            var frace = new Array();
-            //array  de los numeros aleatorios
-            var numerosEje2 = new Array();
+            }
+            // esto imprimira los numeros aleatorios
+            document.getElementById('tablaCuerpoEj2').innerHTML=txt2;
 
-        for(let ir=0; ir<=5; ir++){
-            numerosEje2.push(aleatorio(1,100));
-            frace.push("Súmale","Más");
-
-          txt2+='<tr>';
-          txt2+='<td>'+frace[ir]+'</td>';
-          txt2+='<th scope="row">'+numerosEje2[ir]+'</th>';
-          txt2+='</tr>';
-
-        }
-        // esto imprimira los numeros aleatorios
-        document.getElementById('tablaCuerpoEj2').innerHTML=txt2;
-
+            var resultao = numerosEje2[0] + numerosEje2[1] + numerosEje2[2] + numerosEje2[3] + numerosEje2[4] ;
+            console.log(resultao);  
 
     });
-
 
 
     // boton de enviar resultados de test
