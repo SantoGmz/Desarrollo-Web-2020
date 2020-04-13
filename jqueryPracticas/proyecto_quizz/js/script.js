@@ -221,7 +221,7 @@ $(function () {
 
     }
 
-       //Generar numero aleatorio de 4 digitos
+       //Generar numero aleatorio de 4 digitos 
        function generarContra(min, max) {
            $('#btnAdivinar').value="hola";
         return console.log(Math.round(Math.random() * (max - min) + min));
@@ -231,5 +231,15 @@ $(function () {
     $('#btnSiguiente1').on("click", function(){
         $('.ejerc1').hide('fast');
         $('.ejerc2').slideToggle('slow');
+        ejec2Aleatorio(1, 100);
     });
+
+
+
+
+    function ejec2Aleatorio(min, max){
+    return console.log(Math.round(Math.random() * (max - min) + min));
+    };
+
+    // ===el boton tiene que estar oculto siempre, creo que tendre que usar hasClass, es un verificador de clase, addClass y removeClass, es la mejor idea hasta ahora
 });
