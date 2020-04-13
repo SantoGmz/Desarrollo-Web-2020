@@ -2,6 +2,9 @@ $(function () {
     
     $('#tablaDetalles').hide();
     $('#clear').hide();
+    // $('#ejerc2').hide();
+    $('#eje2ResultadoFinal').hide('fast');
+
 
 
 
@@ -199,12 +202,7 @@ $(function () {
             audio(2)
             $('#iptAdivinar').css({'border':'1px solid red'});
 
-        }
-
-
-
-
-        
+        }        
         // var conteo = respuesta.length;
 
     });
@@ -221,22 +219,39 @@ $(function () {
 
     }
 
-       //Generar numero aleatorio de 4 digitos 
-       function generarContra(min, max) {
-           $('#btnAdivinar').value="hola";
-        return console.log(Math.round(Math.random() * (max - min) + min));
 
-    };
 
     $('#btnSiguiente1').on("click", function(){
         $('.ejerc1').hide('fast');
-        $('.ejerc2').slideToggle('slow');
-        ejec2Aleatorio(1, 100);
+        $('.ejerc1').addClass('oculto');
+        alert('Pensa Rapido!');
+        $('#eje2ResultadoFinal').show('fast');
+        // $('#ejerc2').slideToggle('slow');
 
-        $(this).addClass('oculto');
+        // $(this).addClass('oculto');
+        var txt2="";
+
+        txt2+='<tr>';
+            txt2+='<td>Tienes</td>';
+            txt2+='<th scope="row">'+aleatorio(10, 100)+'</th>';
+            txt2+='</tr>';
+        for(let i=0; i<2; i++){
+          
+          txt2+='<tr>';
+          txt2+='<td>Súmale</td>';
+          txt2+='<th scope="row">'+aleatorio(10, 50)+'</th>';
+          txt2+='</tr>';
+
+          txt2+='<tr>';
+          txt2+='<td>Más</td>';
+          txt2+='<th scope="row">'+aleatorio(1, 10)+'</th>';
+          txt2+='</tr>';
+        }
+
+        document.getElementById('tablaCuerpoEj2').innerHTML=txt2;
+
+
     });
-
-
 
 
     function ejec2Aleatorio(min, max){
