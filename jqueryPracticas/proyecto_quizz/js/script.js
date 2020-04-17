@@ -1,9 +1,9 @@
-$(function () {
+$(function() {
 
     $('#tablaDetalles').hide();
     $('#clear').hide();
-    // $('#ejerc2').hide();
-    $('#eje2ResultadoFinal').hide('fast');
+    $('#ejerc2').hide();
+    //$('#eje2ResultadoFinal').hide('fast');
 
 
 
@@ -16,9 +16,10 @@ $(function () {
 
     };
 
-    //btn-generar numeros aleatorios
-    $('#generarNumeros').on("click", function () {
+    //btn-generar numeros aleatorios del primer ejercicio
+    $('#generarNumeros').on("click", function() {
         restablecerColor();
+        // Tabla del primer nivel nivel1
         $('#tablaDetalles').hide('slow');
         document.getElementById('cp1').value = aleatorio(1000, 9999);
         document.getElementById('cp2').value = aleatorio(1000, 9999);
@@ -59,7 +60,7 @@ $(function () {
     };
 
     //btn-crear
-    $('#crear').on("click", function () {
+    $('#crear').on("click", function() {
         restablecerColor();
 
         $('#tablaDetalles').show(500);
@@ -203,7 +204,7 @@ $(function () {
 
 
     //btn-adivinar
-    $('#btnAdivinar').on("click", function () {
+    $('#btnAdivinar').on("click", function() {
         var resultado = document.getElementById('Otnas').value;
         resultado = parseInt(resultado);
         //el input 
@@ -233,11 +234,11 @@ $(function () {
     ///Audio agregado, esta funcion se dará cuenta si es correcto o incorrecto.
     function audio(x) {
         if (x == 1) {
-            audi = new Audio('audio/correcto.mp3')
+            audi = new Audio('../audio/correcto.mp3')
             audi.play();
 
         } else {
-            audi = new Audio('audio/incorrecto.mp3')
+            audi = new Audio('../audio/incorrecto.mp3')
             audi.play();
         }
 
@@ -249,64 +250,70 @@ $(function () {
     $('#btnSiguiente1').on("click", function jsjs() {
 
         carga()
-        // cronometro para los segudnos
+            // cronometro para los segudnos
+
         function carga() {
+
             contador_s = 0;
             s = document.getElementById("conteoEj2");
 
 
-           var intervalo = window.setInterval(function () {
-                    if (contador_s == 0) {
-                        contador_s = 15;
-                        console.log("pulsado")
-                        $('.ejerc1').hide('fast');
-                        $('.ejerc1').addClass('oculto');
-                        alert('Piensa Rápido!');
-                        $('#eje2ResultadoFinal').show('fast');
-                        // $('#ejerc2').slideToggle('slow');        
+            var intervalo = window.setInterval(function() {
+                $('#cuerpoTabla').hide('fast');
+
+                $('#ejerc1').hide('fast');
+                $('#ejerc2').show('fast');
+                if (contador_s == 0) {
+                    contador_s = 15;
+                    console.log("pulsado")
+                        // $('.ejerc1').show('fast');
+                        // $('.ejerc1').addClass('oculto');
+                    alert('Piensa Rápido!');
+                    $('#eje2ResultadoFinal').show('fast');
+                    $('#ejerc2').slideToggle('slow');
 
 
-                        // $(this).addClass('oculto');
-                        var txt2 = "";
+                    // $(this).addClass('oculto');
+                    var txt2 = "";
 
-                        //esto es la cabecera
+                    //esto es la cabecera
+                    txt2 += '<tr>';
+                    txt2 += '<td>Tienes</td>';
+                    txt2 += '<th scope="row">0</th>';
+                    txt2 += '</tr>';
+
+                    // lo hice con esta estructura porque queria agregar diferente tipo de texto
+                    //Array de las fraces sumale y agregale
+                    var frace = new Array();
+                    //array  de los numeros aleatorios
+                    var numerosEje2 = new Array();
+                    //Cantidades de la suma de los unput=================================
+                    for (let ir = 0; ir < 5; ir++) {
+                        numerosEje2.push(aleatorio(1, 100));
+                        frace.push("Súmale", "Más");
+
                         txt2 += '<tr>';
-                        txt2 += '<td>Tienes</td>';
-                        txt2 += '<th scope="row">0</th>';
+                        txt2 += '<td>' + frace[ir] + '</td>';
+                        txt2 += '<th scope="row">' + numerosEje2[ir] + '</th>';
                         txt2 += '</tr>';
 
-                        // lo hice con esta estructura porque queria agregar diferente tipo de texto
-                        //Array de las fraces sumale y agregale
-                        var frace = new Array();
-                        //array  de los numeros aleatorios
-                        var numerosEje2 = new Array();
-                        //Cantidades de la suma de los unput=================================
-                        for (let ir = 0; ir < 5; ir++) {
-                            numerosEje2.push(aleatorio(1, 100));
-                            frace.push("Súmale", "Más");
-
-                            txt2 += '<tr>';
-                            txt2 += '<td>' + frace[ir] + '</td>';
-                            txt2 += '<th scope="row">' + numerosEje2[ir] + '</th>';
-                            txt2 += '</tr>';
-
-                        }
-                        // esto imprimira los numeros aleatorios
-                        document.getElementById('tablaCuerpoEj2').innerHTML = txt2;
-
-                        var resultao = numerosEje2[0] + numerosEje2[1] + numerosEje2[2] + numerosEje2[3] + numerosEje2[4];
-                        document.getElementById('inpResultEje2').value=resultao;
-                        console.log(resultao);
-
-
                     }
-                    s.innerHTML = contador_s;
-                    contador_s = contador_s - 1;
-                    // intervalo de actualizacion ↓
-                }, 1000);
-                // Funcion carga↓
+                    // esto imprimira los numeros aleatorios
+                    document.getElementById('tablaCuerpoEj2').innerHTML = txt2;
+
+                    var resultao = numerosEje2[0] + numerosEje2[1] + numerosEje2[2] + numerosEje2[3] + numerosEje2[4];
+                    console.log(resultao);
+                    document.getElementById('inpResultEje2').value = resultao;
+
+
+                }
+                s.innerHTML = contador_s;
+                contador_s = contador_s - 1;
+                // intervalo de actualizacion ↓
+            }, 1000);
+            // Funcion carga↓
         }
-       
+
         // Cierre de crear un input hidden↑
 
 
@@ -317,13 +324,20 @@ $(function () {
 
 
     // boton de enviar resultados de test
-    $('#btnEje2EnviarResult').on('click', function () {
+    $('#btnEje2EnviarResult').on('click', function() {
 
         // console.log("pulsado23");
-       var resultado = parseInt(document.getElementById("inpResultEje2").value);
-    //    console.log(resultado);
+        var resultado = parseInt(document.getElementById("inpResultEje2").value);
+        var respuesta = parseInt(document.getElementById('iptejerc2EntradaUser').value);
+        if (respuesta === resultado) {
+            console.log("correcto!");
+        } else {
+            console.log("incorrecto");
+        }
 
-        
+        //    console.log(resultado);
+
+
 
     });
 
