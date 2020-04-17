@@ -1,24 +1,26 @@
-.oculto{
+.oculto {
     display: none;
 }
+
+
 /* Agregando la fuente de firma que me gusta */
-@font-face{
-    font-family:'AcrossTheRoad';
-    src: url(../fonts/AcrossTheRoad.ttf) ;
+
+@font-face {
+    font-family: 'AcrossTheRoad';
+    src: url(../fonts/AcrossTheRoad.ttf);
 }
 
-.spacio{
+.spacio {
     margin: 8px 0px 8px;
 }
 
-
-.fSotnas{
+.fSotnas {
     /* position: absolute; */
     font-family: AcrossTheRoad;
     font-weight: 300;
     font-size: 40px;
-    color:white;
-
-
+    color: black;
 }
+
+
 /* https://youtu.be/6BkKiiuTxo8?t=577 */
