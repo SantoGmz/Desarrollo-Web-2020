@@ -260,13 +260,13 @@ $(function() {
         s = document.getElementById("conteoEj2");
 
 
-        var intervalo = window.setInterval(function() {
+        intervalo = window.setInterval(function() {
             $('#cuerpoTabla').hide('fast');
 
             $('#ejerc1').hide('fast');
             $('#ejerc2').show('fast');
             if (contador_s == 0) {
-                contador_s = 15;
+                contador_s = 30;
                 // console.log("pulsado")
                 // $('.ejerc1').show('fast');
                 // $('.ejerc1').addClass('oculto');
@@ -322,9 +322,11 @@ $(function() {
             var respuesta = parseInt(document.getElementById('iptejerc2EntradaUser').value);
             if (respuesta === resultado) {
                 console.log("entro a la condicion")
+                clearInterval(intervalo);
                 console.log("correcto!");
                 audio(1)
             } else {
+                document.getElementById('iptejerc2EntradaUser').value = "";
                 audio(2)
                 console.log("incorrecto");
             }
@@ -339,7 +341,7 @@ $(function() {
 
     // Cierre de crear un input hidden↑
 
-    $('.fsotnas').addClass('out').removeClass('in'); // fade in $('#one').addClass('in').removeClass('out');
+
 
 
 
