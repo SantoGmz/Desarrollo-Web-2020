@@ -291,7 +291,7 @@ $(function() {
                 var numerosEje2 = new Array();
                 //Cantidades de la suma de los unput=================================
                 for (let ir = 0; ir < 5; ir++) {
-                    numerosEje2.push(aleatorio(1, 100));
+                    numerosEje2.push(aleatorio(1, 30));
                     frace.push("Súmale", "Más");
 
                     txt2 += '<tr>';
