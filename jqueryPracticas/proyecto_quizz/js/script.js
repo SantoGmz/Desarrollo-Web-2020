@@ -267,9 +267,9 @@ $(function() {
             $('#ejerc2').show('fast');
             if (contador_s == 0) {
                 contador_s = 15;
-                console.log("pulsado")
-                    // $('.ejerc1').show('fast');
-                    // $('.ejerc1').addClass('oculto');
+                // console.log("pulsado")
+                // $('.ejerc1').show('fast');
+                // $('.ejerc1').addClass('oculto');
                 alert('Piensa Rápido!');
                 $('#eje2ResultadoFinal').show('fast');
                 $('#ejerc2').slideToggle('slow');
@@ -313,33 +313,37 @@ $(function() {
             contador_s = contador_s - 1;
             // intervalo de actualizacion ↓
         }, 1000);
+
+        // boton de enviar resultados de test
+        $('#btnEje2EnviarResult').on('click', function() {
+
+            // console.log("pulsado23");
+            var resultado = parseInt(document.getElementById("inpResultEje2").value);
+            var respuesta = parseInt(document.getElementById('iptejerc2EntradaUser').value);
+            if (respuesta === resultado) {
+                console.log("entro a la condicion")
+                console.log("correcto!");
+                audio(1)
+            } else {
+                audio(2)
+                console.log("incorrecto");
+            }
+
+            //    console.log(resultado);
+
+
+
+        });
         // Funcion carga↓
     }
 
     // Cierre de crear un input hidden↑
 
+    $('.fsotnas').addClass('out').removeClass('in'); // fade in $('#one').addClass('in').removeClass('out');
 
 
 
 
 
-
-    // boton de enviar resultados de test
-    $('#btnEje2EnviarResult').on('click', function() {
-
-        // console.log("pulsado23");
-        var resultado = parseInt(document.getElementById("inpResultEje2").value);
-        var respuesta = parseInt(document.getElementById('iptejerc2EntradaUser').value);
-        if (respuesta === resultado) {
-            console.log("correcto!");
-        } else {
-            console.log("incorrecto");
-        }
-
-        //    console.log(resultado);
-
-
-
-    });
 
 });
