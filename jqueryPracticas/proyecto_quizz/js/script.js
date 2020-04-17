@@ -313,7 +313,7 @@ $(function() {
             contador_s = contador_s - 1;
             // intervalo de actualizacion ↓
         }, 1000);
-
+        // S O T N A S - Q U I Z
         // boton de enviar resultados de test
         $('#btnEje2EnviarResult').on('click', function() {
 
