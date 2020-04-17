@@ -199,6 +199,7 @@ $(function() {
                 'border': '1px solid red'
             });
         }
+        console.log(input4resultado)
     });
 
 
@@ -213,6 +214,7 @@ $(function() {
         var respuesta = parseInt(inputadivinar);
         // console.log(respuesta);
         if (respuesta == resultado) {
+            $('#tablaDetalles').hide('fast');
             console.log("correcto");
             audio(1)
             $('#iptAdivinar').css({
