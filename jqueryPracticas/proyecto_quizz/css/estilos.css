@@ -19,7 +19,12 @@
     font-family: AcrossTheRoad;
     font-weight: 300;
     font-size: 40px;
-    color: black;
+    color: white;
+}
+
+.fSotnas:hover {
+    color: red;
+    transition: ease-in-out .55s;
 }
 
 
