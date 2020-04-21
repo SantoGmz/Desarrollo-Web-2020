@@ -8,7 +8,8 @@
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000">
     <title>Sotnas Quizz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/jquery-confirm.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
@@ -68,9 +69,10 @@
                 <input type="number" class="form-control spacio" id="cp3" placeholder="INGRESA VALORES DE 4 DIGITOS">
                 <input type="number" class="form-control spacio" id="cp4" placeholder="INGRESA VALORES DE 4 DIGITOS">
                 <!-- Botones -->
+                <button type="button" id="ayuda" class="btn btn-light btn-block">Ayuda</button>
                 <button type="button" id="clear" class="btn btn-danger btn-block">Limpiar</button>
-                <button type="button" id="generarNumeros" class="btn btn-warning btn-block">Generar Num</button>
-                <button type="button" id="crear" class="btn btn-primary btn-block">Crear</button>
+                <button type="button" id="generarNumeros" class="btn btn-primary btn-block">Generar Num</button>
+                <button type="button" id="crear" class="btn btn-success btn-block">Crear</button>
                 <!-- ///Botones -->
             </div>
 
@@ -122,6 +124,7 @@
 
                     </tbody>
                     <tr id="eje2ResultadoFinal">
+                        <td></td>
                         <td><input type="number" class="form-control" placeholder="Resultado" id="iptejerc2EntradaUser"></td>
                         <td> <input type="button" class="btn btn-primary" value="enviar" id="btnEje2EnviarResult"> </td>
                     </tr>
@@ -134,22 +137,13 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
     </div>
     <!-- ///container/// -->
 
     <script src="../js/jquery.js"></script>
     <script src="../js/script.js"></script>
     <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/jquery-confirm.min.js"></script>
 </body>
 
 </html>
