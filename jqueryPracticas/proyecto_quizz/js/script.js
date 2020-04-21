@@ -7,7 +7,9 @@ $(function() {
 
 
 
-
+    $('.facil').on('click' function(){
+        alert("El siguiente ejercicio trata de ver como se resuleve ")
+    });
 
 
     //Generar numero aleatorio de 4 digitos
