@@ -4,14 +4,7 @@ $(function() {
     $('#clear').hide();
     $('#ejerc2').hide();
     //$('#eje2ResultadoFinal').hide('fast');
-
-
-
-    $('#facil').on('click', function(){
-        alert("El siguiente ejercicio trata de ver como se resuleve ")
-    });
-
-
+  
     //Generar numero aleatorio de 4 digitos
     function aleatorio(min, max) {
         return Math.round(Math.random() * (max - min) + min);
@@ -272,7 +265,7 @@ $(function() {
                 // console.log("pulsado")
                 // $('.ejerc1').show('fast');
                 // $('.ejerc1').addClass('oculto');
-                alert('Piensa Rápido!');
+                $.dialog({title: '¡Pienza Rapido!',content: '',});
                 $('#eje2ResultadoFinal').show('fast');
                 $('#ejerc2').slideToggle('slow');
 
@@ -346,7 +339,14 @@ $(function() {
 
 
 
+    // click en facil, Instrucciones
 
+    $('#ayuda').on("click", () =>{
+        $.dialog({
+            title: 'Nivel 1/3',
+            content: 'Este nivel trata de insertar valores de 4 dígitos o Generarlos automáticamente luego buscar como se crean las respuestas a partir de las operaciones dadas como ejemplos.',
+        });
+     })
 
 
 
