@@ -1,4 +1,37 @@
-let objeto={ 
+
+const datos = [
+    {nombre:"santos", apellido:"Gomez"},
+    {nombre:"JOse", apellido:"Frias"},
+    {nombre:"Gaston", apellido:"Alacasan"},
+    {nombre:"Gabriel", apellido:"alacaserola"},
+
+];
+
+
+
+
+
+console.log(datos[0].apellido)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let objeto={ 
     nombre:{
         PrimerNombre:"Santos",
         segundoNombre:"Severino",
@@ -32,4 +65,4 @@ const objeto3 = {
 const json3 = [{}]
 
 console.log(objeto.nombre.PrimerNombre)  ;
-console.log(unJson[0].valor)  ;
+console.log(unJson[0].valor)  ;*/
